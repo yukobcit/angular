@@ -1,0 +1,14 @@
+
+<div *ngIf="tags">Tags<br>  </div>
+<div class="pointer" *ngFor="let tag of tags; let i = index"
+(click)="setTagFilter(tag)">
+  {{tag.name}}
+</div>
+
+<div class="pointer"
+*ngIf="tagFilter"
+[ngStyle]="{
+  padding: '1rem'
+
+}"
+>Filter - {{tagFilter.name}}</div>
