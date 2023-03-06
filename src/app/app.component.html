@@ -1,49 +1,12 @@
 <header>
   <h1>{{ title }}</h1>
+  <nav>
+    <span routerLink="/">Home</span> |
+    <span routerLink="/projects">Projects</span>
+  </nav>
 </header>
 <main>
-
-  <section id="side-nav">
-    <div *ngIf="(categoryFilter || tagFilter)" class="pointer" (click)="clearFilters()">Delete - Filter<br><br></div>
-    <article *ngIf="categoryFilter || tagFilter">
-      <h2>Filter:</h2>
-      <div class="current-filter" (click)="clearFilters()">
-        {{ categoryFilter?.name || tagFilter?.name }}
-        <i class="bi bi-trash"></i>
-      </div>
-    </article>
-
-    <h3>Categories</h3>
-    <article id="categories">
-      <app-categories
-        [categoryFilter]="categoryFilter"
-        (newCategoryFilterEvent)="setCategoryFilter($event)"
-      ></app-categories>
-    </article>
-    <h3>Tags</h3>
-    <article id="tags">
-      <app-tags
-        [tagFilter]="tagFilter"
-        (newTagFilterEvent)="setTagFilter($event)"
-      ></app-tags>
-    </article>
-  </section>
-
-
-  
-  <section id="projects">
-    <div>
-    <app-projects
-      [categoryFilter]="categoryFilter"
-      (newCategoryFilterEvent)="setCategoryFilter($event)"
-      [tagFilter]="tagFilter"
-      (newTagFilterEvent)="setTagFilter($event)"
-    ></app-projects>
-  </div>
-  </section>
- 
+  <router-outlet></router-outlet>
 </main>
-
-
-
 <footer>&copy; {{ date.getFullYear() }} {{ author }}</footer>
+

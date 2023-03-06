@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("/assets/images/mountain.jpg");
+    background-size: cover;
+    font-family: 'Lobster', cursive;
+
+  }
+
+  /* Wrapper styles */
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+  }
+  
+  #projects{
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  article{
+    background-color: rgba(255, 255, 255, 0.208);
+  }
+
+  
+    
+  

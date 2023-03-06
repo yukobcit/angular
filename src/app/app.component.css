@@ -1,25 +1,4 @@
-main {
-  display: flex;
-  flex-direction: row;
-}
 
-/* Set the width and margin of the side-nav to position it on the right side */
-#side-nav {
-  width: 250px;
-  margin-left: auto;
-}
-#projects {
-  flex:1;
-
-}
-
-app-projects{
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: -20px;
-}
 
 
 
@@ -30,3 +9,4 @@ app-projects{
 .hidden {
   display: none;
 }
+

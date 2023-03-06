@@ -1,3 +1,24 @@
+/* Set the width and margin of the side-nav to position it on the right side */
+app-projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: -20px;
+}
+
+
+#side-nav {
+  width: 250px;
+  margin-left: auto;
+}
+#projects {
+  flex:1;
+
+}
+
+
+
+
 
 article {
   flex-basis: calc(33.33% - 20px);

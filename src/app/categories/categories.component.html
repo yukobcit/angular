@@ -1,7 +1,6 @@
-<div *ngIf="categories">Categories <br> </div>
-<div class="pointer" *ngFor="let category of categories; let i = index"
-(click)="setCategoryFilter(category)">
-  {{category.name}} 
+<div *ngIf="categories"></div>
+<div class="pointer" *ngFor="let category of categories; let i = index" [routerLink]="['/projects/categories',category.id]">
+ {{category.name}}
 </div>
 
 <div class="pointer"

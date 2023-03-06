@@ -174,19 +174,13 @@ import { Project } from '../model/project';
                 "id": 2,
                 "name": "Laravel",
                 "slug": "laravel",
-                "pivot": {
-                    "projects_id": 8,
-                    "tags_id": 2
-                }
+
             },
             {
                 "id": 3,
                 "name": "PHP",
                 "slug": "php",
-                "pivot": {
-                    "projects_id": 8,
-                    "tags_id": 3
-                }
+
             }
         ]
     },
@@ -209,19 +203,13 @@ import { Project } from '../model/project';
                 "id": 1,
                 "name": "Docker2",
                 "slug": "docker2",
-                "pivot": {
-                    "projects_id": 9,
-                    "tags_id": 1
-                }
+
             },
             {
                 "id": 2,
                 "name": "Laravel",
                 "slug": "laravel",
-                "pivot": {
-                    "projects_id": 9,
-                    "tags_id": 2
-                }
+
             }
         ]
     }

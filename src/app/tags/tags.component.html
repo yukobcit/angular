@@ -1,8 +1,11 @@
 
-<div *ngIf="tags">Tags<br>  </div>
-<div class="pointer" *ngFor="let tag of tags; let i = index"
-(click)="setTagFilter(tag)">
-  {{tag.name}}
+<div *ngIf="tags"> </div>
+
+<!-- <div class="pointer" *ngFor="let tag of tags; let i = index"
+(click)="setTagFilter(tag)"> -->
+
+<div class="pointer" *ngFor="let tag of tags; let i = index" [routerLink]="['/projects/tags',tag.id]">
+{{tag.name}}
 </div>
 
 <div class="pointer"

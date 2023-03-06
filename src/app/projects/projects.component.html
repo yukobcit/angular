@@ -1,21 +1,64 @@
+<div class="wrapper">
+
+<ng-container *ngIf="!selectedProject">
+<div id="projects">
 <article
   *ngFor="let project of projects | projectFilter : tagFilter"
   [class.hidden]="categoryFilter && project.category?.id != categoryFilter.id"
 >
 
   <section>
-    <h2>{{ project.title | uppercase }}</h2>
-    <div>{{ project.excerpt }}</div>
+    <h2><a [routerLink]="['/projects',project.id]">{{ project.title | uppercase }}</a></h2>
+    <div [innerHTML]="project.excerpt"></div>
   </section>
   <footer>
-    <div class="pointer" *ngIf="project.category" (click)="setCategoryFilter(project.category)">
+    <div class="pointer" *ngIf="project.category" [routerLink]="['/projects/categories',project.category.id]">
       Category: <span>{{ project.category.name }}</span>
     </div>
     <div *ngIf="project.tags?.length">
       Tags:
-      <span class="pointer" *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
+      <span class="pointer" *ngFor="let tag of project.tags" [routerLink]="['/projects/tags',tag.id]">
         {{ tag.name }}
       </span>
     </div>
   </footer>
 </article>
+</div>
+</ng-container>
+
+
+
+<section id="side-nav">
+  <div *ngIf="(categoryFilter || tagFilter)" class="pointer" (click)="clearFilters()">Delete - Filter<br><br></div>
+  <article *ngIf="categoryFilter || tagFilter">
+    <h2>Filter:</h2>
+    <div class="current-filter" (click)="clearFilters()">
+      {{ categoryFilter?.name || tagFilter?.name }}
+      <i class="bi bi-trash"></i>
+    </div>
+  </article>
+
+  <h3>Categories</h3>
+  <article id="categories">
+    <app-categories
+      [categoryFilter]="categoryFilter"
+      (newCategoryFilterEvent)="setCategoryFilter($event)"
+    ></app-categories>
+  </article>
+  <h3>Tags</h3>
+  <article id="tags">
+    <app-tags
+      [tagFilter]="tagFilter"
+      (newTagFilterEvent)="setTagFilter($event)"
+    ></app-tags>
+  </article>
+</section>
+</div>
+
+<!-- <section *ngIf="selectedProject">
+  <div (click)="clearSelectedProject()">Back</div>
+  <app-project-detail project="selectedProject"></app-project-detail>
+</section> -->
+
+
+
