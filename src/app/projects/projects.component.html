@@ -10,6 +10,7 @@
   <section>
     <h2><a [routerLink]="['/projects',project.id]">{{ project.title | uppercase }}</a></h2>
     <div [innerHTML]="project.excerpt"></div>
+    <img class="thumb" [src]="'assets/' + project.thumb">
   </section>
   <footer>
     <div class="pointer" *ngIf="project.category" [routerLink]="['/projects/categories',project.category.id]">
@@ -25,8 +26,6 @@
 </article>
 </div>
 </ng-container>
-
-
 
 <section id="side-nav">
   <div *ngIf="(categoryFilter || tagFilter)" class="pointer" (click)="clearFilters()">Delete - Filter<br><br></div>

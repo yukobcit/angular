@@ -5,6 +5,7 @@
 <article *ngIf="project">
   <section>
     <h2>{{ project.title | uppercase }}</h2>
+    <img [src]="'assets/' + project.image">
     <div [innerHTML]="project.body"></div>
   </section>
   <footer>
