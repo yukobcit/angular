@@ -11,5 +11,19 @@
   <div id ="wrapper">
     <app-root></app-root>
   </div>
+
+  <script>
+    const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  burger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    burger.classList.toggle('toggle');
+  });
+  </script>
+  
 </body>
 </html>
+
+
+

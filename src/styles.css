@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-image: url("/assets/images/mountain.jpg");
-    background-size: cover;
-    font-family: 'Lobster', cursive;
-
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(250, 242, 232, 0.676);
+    color: rgb(61, 59, 53);
+    padding: 2rem;
   }
 
   /* Wrapper styles */
@@ -24,6 +24,15 @@ body {
 
   #wrapper{
   
+  }
+  
+  li{
+    list-style-type: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: rgb(61, 59, 53);
   }
 
   

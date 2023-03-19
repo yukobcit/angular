@@ -13,7 +13,7 @@ import { Tag } from './model/tag';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Yuko Showcase';
+  title = 'Showcase';
   date = new Date();
   author = 'Yuko Ishida';
 

@@ -1,55 +1,27 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set default font family and size */
-  body {
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-  }
-  
-  /* Create a wrapper to center content */
-  .wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-  
-  /* Style the header */
-  .header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .header p {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  /* Style the experience section */
-  .experience {
-    margin-bottom: 3rem;
-  }
-  
-  .job {
-    margin-bottom: 2rem;
-  }
-  
-  .job h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .job p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  }
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bio {
+  width: 60%;
+  flex: 1;
+}
+
+.feature-project {
+  width: 35%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  flex: 1;
+}
+.feature-project img {
+  max-width: 100%;
+  height: auto;
+}
+
+.name{
+  display: flex;
+  align-items: center;
+}

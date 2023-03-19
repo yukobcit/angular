@@ -7,22 +7,26 @@
   [class.hidden]="categoryFilter && project.category?.id != categoryFilter.id"
 >
 
-  <section>
-    <h2><a [routerLink]="['/projects',project.id]">{{ project.title | uppercase }}</a></h2>
-    <div [innerHTML]="project.excerpt"></div>
+<section>
+  <h2><a [routerLink]="['/projects',project.id]">{{ project.title | uppercase }}</a></h2>
+  <div [innerHTML]="project.excerpt"></div>
+  <div class="image-footer-container">
     <img class="thumb" [src]="'assets/' + project.thumb">
-  </section>
-  <footer>
-    <div class="pointer" *ngIf="project.category" [routerLink]="['/projects/categories',project.category.id]">
-      Category: <span>{{ project.category.name }}</span>
-    </div>
-    <div *ngIf="project.tags?.length">
-      Tags:
-      <span class="pointer" *ngFor="let tag of project.tags" [routerLink]="['/projects/tags',tag.id]">
-        {{ tag.name }}
-      </span>
-    </div>
-  </footer>
+    <footer>
+      <div class="pointer" *ngIf="project.category" [routerLink]="['/projects/categories',project.category.id]">
+        Category<br><span>{{ project.category.name }}</span><br><br>
+      </div>
+      <div *ngIf="project.tags?.length">
+        Tags<br>
+        <span class="pointer" *ngFor="let tag of project.tags" [routerLink]="['/projects/tags',tag.id]">
+          {{ tag.name }}
+        </span>
+      </div>
+    </footer>
+  </div>
+</section>
+
+
 </article>
 </div>
 </ng-container>

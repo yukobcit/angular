@@ -3,44 +3,68 @@ app-projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-right: -20px;
+  margin-right: -10px;
 }
 #side-nav {
-  width: 250px;
+  width: 100%;
   margin-left: auto;
 }
 #projects {
-  flex:1;
-
+  flex: 1;
 }
 article {
-  flex-basis: calc(33.33% - 20px);
+  flex-basis: 100%;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 0;
+  padding: 20px;
 }
 
-@media (max-width: 1200px) {
-  article {
-    flex-basis: calc(40% - 15px);
-  }
+.image-footer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-
-@media (max-width: 767px) {
-  article {
-    flex-basis: 100%;
-    margin-right: 0;
-  }
+.image-footer-container > * {
+  flex: 1;
 }
 
 .pointer {
-    cursor: pointer;
-}
-  .hidden {
-    display: none;
+  cursor: pointer;
 }
 
-.thumb{
-  width:150px; 
-  height:auto;
-  margin: 0 auto;
+.hidden {
+  display: none;
 }
+
+.thumb {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 0px; /* Add this line to move the thumb to the left */
+  text-align: left;
+}
+
+footer{
+  padding-left: 20px;
+}
+
+
+@media (min-width: 768px) {
+  article {
+    flex-basis: calc(40% - 15px);
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  article {
+    flex-basis: calc(45% - 20px);
+  }
+}
+#side-nav {
+  width: 25%;
+}
+
+
+
+

@@ -1,12 +1,6 @@
-
-
-
-
-.pointer {
-  cursor: pointer;
+/* Default style for mobile devices */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.hidden {
-  display: none;
-}
-

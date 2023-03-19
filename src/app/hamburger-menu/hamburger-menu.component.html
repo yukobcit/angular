@@ -1,0 +1,18 @@
+  <nav>
+    <ul class="nav-links">
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/projects">Projects</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+    </ul>
+    <div class="burger" (click)="toggleNavbar()">
+      <div class="burger-line" [ngClass]="{'burger-line-1': menuOpen, 'burger-line-1-close': !menuOpen}"></div>
+      <div class="burger-line" [ngClass]="{'burger-line-2': menuOpen, 'burger-line-2-close': !menuOpen}"></div>
+      <div class="burger-line" [ngClass]="{'burger-line-3': menuOpen, 'burger-line-3-close': !menuOpen}"></div>
+    </div>
+    <ul class="nav-links-mobile" [ngClass]="{'show': menuOpen}">
+      <li><a routerLink="/" (click)="toggleNavbar()">Home</a></li>
+      <li><a routerLink="/projects" (click)="toggleNavbar()">Projects</a></li>
+      <li><a routerLink="/contact" (click)="toggleNavbar()">Contact</a></li>
+    </ul>
+  </nav>
+
